@@ -1,3 +1,18 @@
+# Rerun II
+
+## Forked from skelterjon/rerun
+
+### Whats Different ?
+
+When coding in and IDE, you sometimes want to build from the IDE to collect errs and what not.
+
+However, rerun will also trigger a build - usually slightly behind the manual build .. so often it 
+will run into the "cant write xxx - text file busy" error, which kills the rerunner.
+
+This change treats a text file busy error as exactly this case, waits a second, and tries again. Easy.
+
+### Original Documetation
+
 Use like ```rerun github.com/skelterjohn/go.uik/uiktest```
 
 Usage: ```rerun [--test] [--build] [--race] [--no-run] <import path> [arg]*```
